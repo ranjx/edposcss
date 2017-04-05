@@ -1,0 +1,294 @@
+*{
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+}
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section {
+    margin: 0;
+    padding: 0
+}
+
+ul,ol {
+    list-style: none
+}
+
+body{
+
+}
+
+.modal-body>a>input,.modal-footer>a>input{
+    border:1px #1266d6  solid;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    background-color: #257bed;
+    text-shadow: 1px 1.732px 2px rgba(68, 68, 68, 0.9);
+}
+
+.bodyBg{
+    height: 440px;
+    background: url("/assets/image/bannerBg.png") no-repeat;
+    background-size: cover;
+}
+
+.bodyServiceBg{
+    height: 440px;
+    background: url("/assets/image/nbg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.bodyCooperationBg{
+    height: 440px;
+    background: url("/assets/image/Cooperation.jpg") no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family:'iconfont';src:url('../fonts/iconfont.eot?1462242749');src:url('../fonts/iconfont.eot?&1462242749#iefix') format("embedded-opentype"),url('../fonts/iconfont.woff?1462242749') format("woff"),url('../fonts/iconfont.ttf?1462242749') format("truetype"),url('../fonts/iconfont.svg?1462242749#iconfont') format("svg")
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.main-content {
+    margin: 0 auto;
+    width: 1200px
+}
+
+.site-nav {
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    background: #3d474a;
+    font-size: 12px
+}
+
+.site-nav .site-notice {
+    float: left;
+    height: 35px
+}
+
+.site-nav .site-notice .more-notice {
+    margin-left: 20px;
+    color: #7bcee6
+}
+
+.site-nav .site-nav-r-opt {
+    float: right;
+    font-size: 12px
+}
+
+.site-nav .site-nav-r-opt li {
+    float: left
+}
+
+.site-nav .site-nav-r-opt li a {
+    color: #fff
+}
+
+.site-nav .site-nav-r-opt li:first-child {
+    margin-right: 5px
+}
+
+.site-nav .site-nav-r-opt li:first-child a {
+    padding-right: 5px;
+    border-right: 1px solid #ddd
+}
+
+.site-nav .site-nav-r-opt li.site-reg {
+    margin-right: 10px
+}
+
+
+
+
+.navBox img{
+    margin-top: 10px;
+}
+.navBox p a,.navBox p{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 70px;
+}
+.btnFree{
+    border: 1px solid #ffffff;
+    height: 30px;
+    width: 80px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 30px;
+    color: #ffffff;
+}
+.bannerBox{
+    height: 340px;
+    background: url("/assets/image/bannerImg.png") 100% 0 no-repeat;
+}
+
+.bannerCooperationBox{
+    height: 400px;
+    background: url("/assets/image/cooperationImg.png") 100% 0 no-repeat;
+}
+
+.bannerBox h1{
+    margin-top: 50px;
+    font-size: 48px;
+    line-height: 110px;
+    text-shadow: 1px 1.732px 2px rgba(68, 68, 68, 0.9);
+}
+.bannerBox h4{
+    text-shadow: 1px 1.732px 2px rgba(68, 68, 68, 0.9);
+}
+
+.bannerCooperationBox h1{
+    margin-top: 50px;
+    font-size: 48px;
+    line-height: 110px;
+    text-shadow: 1px 1.732px 2px rgba(68, 68, 68, 0.9);
+}
+.bannerCooperationBox h4{
+    text-shadow: 1px 1.732px 2px rgba(68, 68, 68, 0.9);
+}
+
+.btnFree1{
+    border:0;
+    font-size: 18px;
+    margin-top: 50px;
+    height: 40px;
+    width: 140px;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    background-color: #87ce1a;
+    text-shadow: 1px 1.732px 2px rgba(68, 68, 68, 0.9);
+}
+
+.noticeBox{
+    color: #666666;
+    line-height: 40px;
+}
+
+.content{
+    color: #666666;
+    text-align: center;
+    margin-top: 40px;
+}
+.content img{
+    margin-bottom: 20px;
+}
+
+.contentBox{
+    position:fixed;
+    bottom:0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.youshiBox{
+    margin: 40px 0 40px 0;
+}
+.youshi{
+    color: #666666;
+    margin: 10px 0 0 20px;
+}
+
+a#logo1
+{
+    background:url("/assets/image/yidong.png") no-repeat;
+    background-size: contain;
+    display:block;
+    height: 50px;
+    width: 90%;
+}
+
+a#logo1:hover
+{
+    background:url("/assets/image/yidong1.png") no-repeat;
+    background-size: contain;
+}
+
+a#logo2
+{
+    background:url("/assets/image/dianxin.png") no-repeat;
+    background-size: contain;
+    display:block;
+    height: 50px;
+    width: 90%;
+}
+a#logo2:hover
+{
+    background:url("/assets/image/dianxin1.png") no-repeat;
+    background-size: contain;
+}
+
+a#logo3
+{
+    background:url("/assets/image/fuxun.png") no-repeat;
+    background-size: contain;
+    display:block;
+    height: 50px;
+    width: 90%;
+}
+a#logo3:hover
+{
+    background:url("/assets/image/fuxun1.png") no-repeat;
+    background-size: contain;
+}
+
+a#logo4
+{
+    background:url("/assets/image/xunle.png") no-repeat;
+    background-size: contain;
+    display:block;
+    height: 50px;
+    width: 90%;
+}
+a#logo4:hover
+{
+    background:url("/assets/image/xunle1.png") no-repeat;
+    background-size: contain;
+}
+
+
+.login-ft {
+    padding-top: 10px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 12px
+}
+
+.login-ft .footer-copyright {
+    text-align: center
+}
+
+.login-ft .footer-copyright p {
+    color: #999;
+    margin-top: 10px
+}
+
+.login-ft .footer-copyright p:first-child {
+    margin-top: 0
+}
+
+.login-ft .footer-copyright .links a {
+    margin-left: 15px;
+    color: #666666
+}
+
+.login-ft .footer-copyright .links a:first-child {
+    margin-left: 0
+}
+
+.footer{
+    text-align: center;
+}
+.footer h5{
+    color: #999999;
+}

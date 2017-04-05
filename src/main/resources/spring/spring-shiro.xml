@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/tx    http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/aop   http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="securityRealm"/>
+    </bean>
+    <bean id="securityRealm" class="com.edpos.ccs.security.SecurityRealm">
+        <property name="authorizationCachingEnabled" value="false"></property>
+        <property name="credentialsMatcher">
+            <bean class="com.edpos.ccs.security.EdposCredentialsMatcher">
+            </bean>
+        </property>
+    </bean>
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/login"/>
+        <!-- <property name="loginUrl" value="https://www.cas.com/login?service=http://www.example.com/shiro-cas" /> -->
+        <property name="successUrl" value="/frame/main"/>
+        <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
+        <property name="filters">
+            <map>
+                <entry key="anon">
+                    <bean class="org.apache.shiro.web.filter.authc.AnonymousFilter"/>
+                </entry>
+
+                <entry key="authc">
+                    <bean class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"/>
+                </entry>
+                <entry key="logout">
+                    <bean class="org.apache.shiro.web.filter.authc.LogoutFilter">
+                        <property name="redirectUrl" value="/logout" />
+                    </bean>
+                </entry>
+                <!-- <entry key="casFilter" value-ref="casFilter"/> -->
+            </map>
+        </property>
+        <property name="filterChainDefinitions">
+            <value>
+                /* = anon
+                /assets/** = anon
+                /frame/** = authc
+                /acc/** = authc
+                /ptt/** = authc
+                /order/** = authc
+                /ccs/** = authc
+                /angent/** = authc
+            </value>
+        </property>
+    </bean>
+
+
+</beans>
